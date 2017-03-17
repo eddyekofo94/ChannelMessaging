@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">"ChannelMessaging "</string>
+    <string name="username">"Username"</string>
+    <string name="password_name">"Password "</string>
+    <string name="button">"Valide"</string>
+    <string name="message">"Number of connected user(s):"</string>
+    <string name="channel">Channel</string>
+
+    <string name="play">Play</string>
+    <string name="cancel">Cancel</string>
+
+
+
+</resources>

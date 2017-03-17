@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/imgUser"
+        android:padding="5dp"
+        android:layout_width="96dp"
+        android:layout_height="96dp" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="5dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:textColor="@color/teal_500"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtMessage"
+        android:text="Name"
+        android:paddingLeft="20dp"
+        android:paddingBottom="10dp"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/text_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:paddingLeft="25dp"
+        android:textColor="@color/teal_800" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:textColor="@color/teal_400"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtDate"
+        android:text="date - nom"
+        android:paddingLeft="25dp" />
+
+    </LinearLayout>
+</LinearLayout>
