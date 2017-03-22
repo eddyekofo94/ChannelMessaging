@@ -31,6 +31,7 @@ public class MessageFragment extends Fragment{
 
     EditText message;
     Button btn_envoyer;
+    Button btn_son;
     public ListView message_list;
     public int channelid;
 
@@ -61,6 +62,7 @@ public class MessageFragment extends Fragment{
         message_list = (ListView) v.findViewById(R.id.message_list);
         message = (EditText) v.findViewById(R.id.message);
         btn_envoyer = (Button) v.findViewById(R.id.envoyer);
+        btn_son = (Button)v.findViewById(R.id.sound);
 
         SharedPreferences tokens = getActivity().getSharedPreferences(LoginActivity.MY_TOKENS, Context.MODE_PRIVATE);
             String accestoken = tokens.getString(LoginActivity.token, "");
@@ -130,6 +132,14 @@ public class MessageFragment extends Fragment{
 
                 message.setText("");
 
+            }
+        });
+
+        btn_son.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v){
+                SoundRecordDialog soundRecordDialog = SoundRecordDialog.newInstance();
+                soundRecordDialog.show(getActivity().getSupportFragmentManager(), "sound");
             }
         });
 

@@ -2,8 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_width="300dp"
+    android:layout_height="150dp">
 
 <android.support.v7.widget.AppCompatImageView
         android:src="@drawable/sound_icon"
@@ -11,29 +11,57 @@
     android:layout_width="match_parent"
     android:layout_height="64dp"
     android:scaleType="fitCenter"
-        android:background="@color/colorAccent"
+        android:background="@color/colorPrimaryDark"
         android:contentDescription="@string/app_name"
     android:adjustViewBounds="false" />
-    <EditText
-        android:id="@+id/username"
-        android:inputType="textEmailAddress"
-        android:layout_width="match_parent"
+    <android.support.v7.widget.LinearLayoutCompat
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginLeft="4dp"
-        android:layout_marginRight="4dp"
-        android:layout_marginBottom="4dp"
-        android:hint="@string/username"
-        tools:gravity="top|bottom" />
-    <EditText
-        android:id="@+id/password"
-        android:inputType="textPassword"
         android:layout_width="match_parent"
+        >
+        <android.support.v7.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_weight="2"
+            android:text="Record"
+            android:textColor="@color/white"
+            android:id="@+id/record_sound"
+            android:layout_height="wrap_content"
+            android:background="@color/teal_300"/>
+        <android.support.v7.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:text="@string/play"
+            android:textColor="@color/white"
+            android:layout_weight="2"
+            android:id="@+id/replay_sound"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:background="@color/colorAccent"/>
+    </android.support.v7.widget.LinearLayoutCompat>
+    <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/layButton"
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/cancelButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.0"
+            android:textColor="@color/white"
+            android:background="@color/red_400"
+            android:text="Cancel" />
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/ok_button"
+        android:layout_marginStart="5dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:layout_marginLeft="4dp"
-        android:layout_marginRight="4dp"
-        android:layout_marginBottom="16dp"
-        android:fontFamily="sans-serif"
-        tools:ignore="LabelFor" />
+        android:layout_weight="2.0"
+        android:textColor="@color/white"
+        android:background="@color/green_400"
+        android:text="OK" />
+
+
+        </android.support.v7.widget.LinearLayoutCompat>
 </LinearLayout>
