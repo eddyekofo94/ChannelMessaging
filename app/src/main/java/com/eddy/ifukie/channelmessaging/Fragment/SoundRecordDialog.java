@@ -29,12 +29,7 @@ public class SoundRecordDialog extends DialogFragment {
 
         ok_btn = (Button) v.findViewById(R.id.ok_button);
 
-        ok_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
+        builder.setView(v);
 
         cancel_btn = (Button) v.findViewById(R.id.cancelButton);
 
@@ -42,7 +37,7 @@ public class SoundRecordDialog extends DialogFragment {
             @Override
             public void onClick(View v) {
                 // User cancelled the dialog
-                SoundRecordDialog.this.getDialog().cancel();
+                SoundRecordDialog.this.getDialog().dismiss();
             }
         });
 
