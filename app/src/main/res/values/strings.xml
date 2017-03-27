@@ -8,7 +8,7 @@
 
     <string name="OK">OK</string>
     <string name="cancel">Cancel</string>
-
-
-
+    <string name="add_friend">Ajouter un ami</string>
+    <string name="yes_fr">oui</string>
+    <string name="no_fr">non</string>
 </resources>

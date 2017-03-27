@@ -48,16 +48,6 @@ public class MessageFragment extends Fragment{
         }else {
             channelid = getActivity().getIntent().getIntExtra("channelID", 1);
         }
-//        Intent intent = getIntent();
-//        int id = intent.getIntExtra("channelID", 1);    //getting the first channel ID??
-//        final Runnable r = new Runnable() {
-//            public void run() {
-//                //use to display messages: tv.append("Hello World");
-//                handler.postDelayed(this, 1000);
-//            }
-//        };
-
-//        handler.postDelayed(r, 1000);
 
         message_list = (ListView) v.findViewById(R.id.message_list);
         message = (EditText) v.findViewById(R.id.message);
