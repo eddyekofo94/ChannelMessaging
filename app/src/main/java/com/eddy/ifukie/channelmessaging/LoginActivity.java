@@ -89,31 +89,35 @@ public class LoginActivity extends AppCompatActivity implements OnDownloaderList
     //We deserialise the results downloaded here.
     @Override
     public void onDownloader(String values) {
-        SharedPreferences.Editor editor = tokens.edit();
-        //Gson: convert Json to Java object
-
-        Gson gson = new Gson();
-        connection = gson.fromJson(values, Connect.class);
-
-        editor.putString(token, connection.getAccesstoken());
-        connection.getAccesstoken();
-        editor.commit();
-        if (connection.getResponse().equalsIgnoreCase("OK")) {
+        if(values.isEmpty()){
             Toast.makeText(getApplicationContext(),
-                    "Réussi", Toast.LENGTH_SHORT).show();
+                    "Erreur de connexion", Toast.LENGTH_SHORT).show();
+        }else {
+            SharedPreferences.Editor editor = tokens.edit();
+            //Gson: convert Json to Java object
+            Gson gson = new Gson();
+            connection = gson.fromJson(values, Connect.class);
 
             editor.putString(token, connection.getAccesstoken());
             connection.getAccesstoken();
             editor.commit();
+            if (connection.getResponse().equalsIgnoreCase("OK")) {
+                Toast.makeText(getApplicationContext(),
+                        "Réussi", Toast.LENGTH_SHORT).show();
+
+                editor.putString(token, connection.getAccesstoken());
+                connection.getAccesstoken();
+                editor.commit();
 
 //            Intent ob = new Intent(LoginActivity.this, MainActivity.class);
-            Intent loginIntent = new Intent(LoginActivity.this, MainActivity.class);
-            startActivity(loginIntent, ActivityOptions.makeSceneTransitionAnimation(LoginActivity.this, mIvLogoWhite, "logo").toBundle());
+                Intent loginIntent = new Intent(LoginActivity.this, MainActivity.class);
+                startActivity(loginIntent, ActivityOptions.makeSceneTransitionAnimation(LoginActivity.this, mIvLogoWhite, "logo").toBundle());
 
-            startActivity(loginIntent);
-        } else {
-            Toast.makeText(getApplicationContext(),
-                    "Erreur de connexion", Toast.LENGTH_SHORT).show();
+                startActivity(loginIntent);
+            } else {
+                Toast.makeText(getApplicationContext(),
+                        "Vérifiez vos informations d'identification", Toast.LENGTH_SHORT).show();
+            }
         }
     }
 }

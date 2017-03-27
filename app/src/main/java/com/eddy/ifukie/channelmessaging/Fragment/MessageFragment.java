@@ -44,9 +44,9 @@ public class MessageFragment extends Fragment{
         View v = inflater.inflate(R.layout.message_fragment, container);
 
         if(getActivity().getIntent().hasExtra("channelID")){
-            channelid = 1;
-        }else {
             channelid = getActivity().getIntent().getIntExtra("channelID", 1);
+        }else {
+            channelid = 1;
         }
 
         message_list = (ListView) v.findViewById(R.id.message_list);
