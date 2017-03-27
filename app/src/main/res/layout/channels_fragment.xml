@@ -17,6 +17,17 @@
         android:layout_gravity="center_horizontal"
         android:padding="@dimen/activity_vertical_margin"/>
 
+    <android.support.v7.widget.AppCompatButton
+        android:text="Mes Amis"
+        android:layout_width="123dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/mes_amis"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:elevation="0dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:textStyle="normal|bold"
+        tools:layout_gravity="center_horizontal" />
+
     <ListView
         android:id="@+id/listViewChannels"
         android:layout_width="match_parent"
