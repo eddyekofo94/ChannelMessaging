@@ -54,6 +54,7 @@ public class MessagesAdapter extends ArrayAdapter<Message> implements OnDownload
         url = values.get(position).getImageUrl();
         final ImageView userImg = (ImageView) messageRowView.findViewById(R.id.imgUser);
 
+        //Download Images using Glid Which is an external library.
         Glide.with(context).load(url).asBitmap().centerCrop().into(new BitmapImageViewTarget(userImg) {
             @Override
             protected void setResource(Bitmap resource) {

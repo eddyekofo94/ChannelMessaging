@@ -4,5 +4,5 @@ package com.eddy.ifukie.channelmessaging;
  * Created by ifukie on 23/01/2017.
  */
 public interface OnDownloaderListener {
-    public void onDownloader(String values);
+    void onDownloader(String values);
 }

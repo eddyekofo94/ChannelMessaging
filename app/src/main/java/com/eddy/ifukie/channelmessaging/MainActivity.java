@@ -28,10 +28,10 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         FragmentManager fragmentManager = this.getSupportFragmentManager();
 
 
-        if(fragB == null|| !fragB.isInLayout()){
+        if(fragB == null || !fragB.isInLayout()){
             Channel channel = (Channel)fragA.lvChannels.getAdapter().getItem(position);
 
-            Intent i = new Intent(getApplicationContext(),MessagesActivity.class);
+            Intent i = new Intent(getApplicationContext(), MessagesActivity.class);
             i.putExtra("channelID", channel.getChannelID());
             startActivity(i);
         } else {
